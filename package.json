@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hb-bobo/auto-trader-client.git"
+  },
+  "author": "hb-bobo <751968840@qq.com>",
+  "scripts": {
+    "dev": "max dev",
+    "build": "max build",
+    "format": "prettier --cache --write .",
+    "prepare": "husky install",
+    "postinstall": "max setup",
+    "setup": "max setup",
+    "start": "npm run dev",
+    "deploy:beta": "npm run build && node scripts/deploy.js deploy-beta",
+    "deploy:prod": "npm run build && node scripts/deploy.js deploy-master"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-components": "^2.0.1",
+    "@klinecharts/pro": "^0.1.1",
+    "@umijs/max": "^4.0.64",
+    "axios": "^1.3.4",
+    "codejar": "^3.7.0",
+    "klinecharts": "^9.1.1",
+    "prismjs": "^1.29.0",
+    "socket.io-client": "^4.6.1",
+    "use-easy-model": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.3.1",
+    "@types/lodash": "^4.14.192",
+    "@types/prismjs": "^1.26.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/socket.io-client": "^3.0.0",
+    "gh-pages": "^5.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^2",
+    "prettier-plugin-packagejson": "^2",
+    "typescript": "^5.0.0"
+  }
+}
